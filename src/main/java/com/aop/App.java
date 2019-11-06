@@ -9,7 +9,7 @@ public class App {
     {
 
         // 实例化应用上下文(装载bean，将各种类实例化装载到内存heap空间, 没有被使用后, 由gc回收)
-        ApplicationContext ac = new ClassPathXmlApplicationContext("beans.xml");
+        ApplicationContext ac = new ClassPathXmlApplicationContext("aop.beans.xml");
 
         // 不用bean代理
         ServiceInterface ms = (ServiceInterface) ac.getBean("myService");

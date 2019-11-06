@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <bean id="goods" class="com.annotation.autowired.Goods">
+        <property name="name" value="袜子一条" />
+    </bean>
+    <bean id="user" class="com.annotation.autowired.User">
+        <property name="name" value="郑剑峰" />
+    </bean>
+
+    <!-- 传统的bean配置 -->
+    <!--
+    <bean id="order" class="com.annotation.Order">
+        <property name="id" value="123123123" />
+        <property name="goods" ref="goods" />
+        <property name="user" ref="user" />
+    </bean>
+    -->
+
+    <!-- 传统的bean配置 -->
+    <bean id="order" class="com.annotation.autowired.Order">
+        <property name="id" value="123123123" />
+        <property name="goods" ref="goods" />
+        <property name="user" ref="user" />
+    </bean>
+
+    <!-- 通过使用注解的方式 -->
+    <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor" />
+    <bean id="order2" class="com.annotation.autowired.Order2">
+        <property name="id" value="123123123" />
+    </bean>
+
+</beans>
