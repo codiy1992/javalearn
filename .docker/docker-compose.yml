@@ -1,14 +1,10 @@
 version: '3'
 
-networks:
-  backend:
-    driver: ${NETWORKS_DRIVER}
-
-volumes:
-  mysql:
-    driver: ${VOLUMES_DRIVER}
-  redis:
-    driver: ${VOLUMES_DRIVER}
+#volumes:
+#  mysql:
+#    driver: ${VOLUMES_DRIVER}
+#  redis:
+#    driver: ${VOLUMES_DRIVER}
 
 services:
     tomcat:
@@ -16,7 +12,8 @@ services:
       ports: 
         - 8080:8080
       volumes:
-        - ./webapps:/usr/local/tomcat/webapps
+        - ./tomcat/conf:/usr/local/tomcat/conf
+        - ./tomcat/webapps:/usr/local/tomcat/webapps
 
 #   mysql:
 #     build:

@@ -1,0 +1,12 @@
+plugins {
+    id 'war'
+}
+
+repositories {
+}
+
+dependencies {
+    providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
+}
+
+archivesBaseName = 'learn-servlet3.0'
