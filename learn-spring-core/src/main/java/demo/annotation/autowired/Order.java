@@ -1,4 +1,4 @@
-package com.annotation.autowired;
+package demo.annotation.autowired;
 /**
  * @author codiy
  */

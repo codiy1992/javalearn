@@ -1,15 +1,15 @@
-package com.annotation.autowired;
+package demo.annotation.autowired;
 
 /**
  * @author codiy
  */
-public class Goods {
+public class User {
 
     public String name;
 
     @Override
     public String toString() {
-        return "Goods{" +
+        return "User{" +
                 "name='" + name + '\'' +
                 '}';
     }
@@ -21,6 +21,4 @@ public class Goods {
     public void setName(String name) {
         this.name = name;
     }
-
-
 }

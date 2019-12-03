@@ -6,10 +6,10 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="goods" class="com.annotation.autowired.Goods">
+    <bean id="goods" class="demo.annotation.autowired.Goods">
         <property name="name" value="袜子一条" />
     </bean>
-    <bean id="user" class="com.annotation.autowired.User">
+    <bean id="user" class="demo.annotation.autowired.User">
         <property name="name" value="郑剑峰" />
     </bean>
 
@@ -23,7 +23,7 @@
     -->
 
     <!-- 传统的bean配置 -->
-    <bean id="order" class="com.annotation.autowired.Order">
+    <bean id="order" class="demo.annotation.autowired.Order">
         <property name="id" value="123123123" />
         <property name="goods" ref="goods" />
         <property name="user" ref="user" />
@@ -31,7 +31,7 @@
 
     <!-- 通过使用注解的方式 -->
     <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor" />
-    <bean id="order2" class="com.annotation.autowired.Order2">
+    <bean id="order2" class="demo.annotation.autowired.Order2">
         <property name="id" value="123123123" />
     </bean>
 

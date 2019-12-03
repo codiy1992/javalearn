@@ -1,8 +1,11 @@
-package com.annotation.autowired;
+package demo.annotation.component;
+
+import org.springframework.stereotype.Component;
 
 /**
  * @author codiy
  */
+@Component
 public class User {
 
     public String name;

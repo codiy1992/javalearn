@@ -1,13 +1,11 @@
-package com.annotation.component;
+package demo.annotation.autowired;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
 /**
  * @author codiy
  */
-@Component
-public class Order {
+public class Order2 {
 
    public String id;
 

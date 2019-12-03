@@ -7,21 +7,21 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 
     <!-- 配置被代理的对象 -->
-    <bean id="myService" class="com.aop.MyService">
+    <bean id="myService" class="demo.aop.MyService">
         <property name="name" value="郑剑峰" />
     </bean>
     <!-- 配置前置通知 -->
-    <bean id="myMethodBeforeAdvice" class="com.aop.MyMethodBeforeAdvice" />
+    <bean id="myMethodBeforeAdvice" class="demo.aop.MyMethodBeforeAdvice" />
     <!-- 配置后置通知 -->
-    <bean id="myAfterReturningAdvice" class="com.aop.MyAfterReturningAdvice" />
+    <bean id="myAfterReturningAdvice" class="demo.aop.MyAfterReturningAdvice" />
     <!-- 配置后置通知 -->
-    <bean id="myMethodInterceptorAdvice" class="com.aop.MyMethodInterceptorAdvice" />
+    <bean id="myMethodInterceptorAdvice" class="demo.aop.MyMethodInterceptorAdvice" />
     <!-- 配置代理 -->
     <bean id="proxyFactoryBean" class="org.springframework.aop.framework.ProxyFactoryBean">
         <property name="proxyInterfaces">
             <list>
-                <value>com.aop.ServiceInterface</value>
-                <value>com.aop.ServiceInterface2</value>
+                <value>demo.aop.ServiceInterface</value>
+                <value>demo.aop.ServiceInterface2</value>
             </list>
         </property>
         <property name="interceptorNames">

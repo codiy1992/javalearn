@@ -1,11 +1,8 @@
-package com.annotation.component;
-
-import org.springframework.stereotype.Component;
+package demo.annotation.autowired;
 
 /**
  * @author codiy
  */
-@Component
 public class Goods {
 
     public String name;
@@ -16,4 +13,14 @@ public class Goods {
                 "name='" + name + '\'' +
                 '}';
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+
 }

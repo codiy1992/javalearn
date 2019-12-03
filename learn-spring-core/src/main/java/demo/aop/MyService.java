@@ -1,4 +1,4 @@
-package com.aop;
+package demo.aop;
 
 public class MyService implements ServiceInterface, ServiceInterface2 {
 
