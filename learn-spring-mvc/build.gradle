@@ -1,0 +1,11 @@
+plugins {
+    id 'war'
+}
+
+repositories {
+}
+
+dependencies {
+    implementation 'org.springframework:spring-webmvc:5.2.1.RELEASE'
+    compileOnly 'javax.servlet:javax.servlet-api:4.0.1'
+}

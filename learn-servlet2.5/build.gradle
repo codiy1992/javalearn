@@ -8,4 +8,3 @@ dependencies {
     compileOnly 'javax.servlet:servlet-api:2.5'
 }
 
-archivesBaseName = 'learn-servlet2.5'
