@@ -11,6 +11,7 @@ services:
       image: tomcat:9.0.27
       ports: 
         - 8080:8080
+        - 8443:8443
       volumes:
         - ./tomcat/conf:/usr/local/tomcat/conf
         - ./tomcat/webapps:/usr/local/tomcat/webapps

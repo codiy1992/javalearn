@@ -17,14 +17,14 @@ public class AsyncDemoServlet extends HttpServlet {
             throws IOException, ServletException {
         resp.setContentType("text/html;charset=UTF-8");
         PrintWriter out = resp.getWriter();
-        out.println("进入Servlet的时间：" + new Date() + ".");
+        out.println("进入Servlet的时间：" + new Date() + ".\n");
         out.flush();
 
         //在子线程中执行业务调用，并由其负责输出响应，主线程退出
         AsyncContext ctx = req.startAsync();
         new Thread(new Executor(ctx)).start();
 
-        out.println("结束Servlet的时间：" + new Date() + ".");
+        out.println("结束Servlet的时间：" + new Date() + ".\n");
         out.flush();
     }
 }

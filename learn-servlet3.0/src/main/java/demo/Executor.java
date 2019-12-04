@@ -15,7 +15,7 @@ public class Executor implements Runnable {
             //等待十秒钟，以模拟业务方法的执行
             Thread.sleep(10000);
             PrintWriter out = ctx.getResponse().getWriter();
-            out.println("业务处理完毕的时间：" + new Date() + ".");
+            out.println("业务处理完毕的时间：" + new Date() + ".\n");
             out.flush();
             ctx.complete();
         } catch (Exception e) {
