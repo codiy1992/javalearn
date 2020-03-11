@@ -1,0 +1,13 @@
+plugins {
+    id "application"
+}
+
+repositories {
+}
+
+dependencies {
+}
+
+application {
+    mainClassName = 'datatypes.Demo'
+}
